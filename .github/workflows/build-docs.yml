@@ -2,7 +2,7 @@ name: Lores Site Builder
 on:
   push:
     branches:
-      - master
+      - main
 
 env:
   PYTHON_VERSION: 3.x

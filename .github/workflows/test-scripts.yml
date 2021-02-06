@@ -1,8 +1,7 @@
-name: Lores Site Builder
+name: Test scripts for errors
 on:
-  push:
-    branches:
-      - master
+  - push
+  - pull_request
 
 env:
   PYTHON_VERSION: 3.x
