@@ -1,0 +1,46 @@
+name: Lores Site Builder
+on:
+  push:
+    branches:
+      - master
+
+env:
+  PYTHON_VERSION: 3.x
+  NODE_VERSION: 14.x # Bumped from 12.x
+
+jobs:
+  script-simulator:
+    name: Test scripts for errors
+    runs-on: ubuntu-latest
+    steps:
+
+      # Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Setup the runtimes
+      - name: Set up Python runtime
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - name: Set up Node.js runtime
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Set up Node.js dependency cache
+        uses: actions/cache@v2
+        id: cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+      - name: Set up Node.js dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm install
+
+      # Run the scripts
+      - name: Test bootstraping process
+        run: bash bin/bootstrap
+      - name: Test update process
+        run: bash bin/update
+      - name: Test bootstraping process using the setup script
+        run: bash bin/setup
