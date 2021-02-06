@@ -10,7 +10,7 @@ env:
 jobs:
   script-simulator:
     name: Test scripts for errors
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04 # Use latest LTS as possible
     steps:
 
       # Checkout
@@ -38,7 +38,9 @@ jobs:
 
       # Run the scripts
       - name: Test bootstraping process
-        run: bash bin/bootstrap
+        run: |
+          sudo apt update
+          bash bin/bootstrap
       - name: Test update process
         run: bash bin/update
       - name: Test bootstraping process using the setup script

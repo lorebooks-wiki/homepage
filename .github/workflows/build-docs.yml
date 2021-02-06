@@ -10,7 +10,7 @@ env:
 jobs:
   documentation:
     name: Build documentation
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04 # use latest LTS as possible
     steps:
 
       - name: Checkout repository

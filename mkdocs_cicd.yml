@@ -24,7 +24,7 @@ theme:
   # edition, the theme name should be nullified unless installed using
   # `pip install .` on the material-theme-customized directory or installed
   # from its repo as part of the normal install using the requirements file.
-  name: material-theme-customized
+  name: material
 
   # 404 page
   static_templates:
