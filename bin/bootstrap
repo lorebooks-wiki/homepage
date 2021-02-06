@@ -1,0 +1,33 @@
+#!bin/bash
+
+set -e
+
+if [[ -f "requirements.txt" ]]; then
+    echo "==> Installing base Python dependencies…"
+    command -v pip3 >/dev/null 2>&1 || { echo >&2 "❌ Python3 is missing, please install it manually then run this again. Aborting..."; exit 1; }
+    pip3 install -r requirements.txt -U
+
+    echo "==> Installing custom theme dependencies…"
+    echo "    This might take some time since its requires cloning the whole repository"
+    echo "    for the first time. If you have it, this script will do git pull instead."
+    command -v git >/dev/null 2>&1 || { echo >&2 "❌ You must install git to clone the custom theme repo. Aborting..."; exit 1; }
+    git clone https://github.com/Community-Lores/mkdocs-material.git material-theme-customized || cd material-theme-customized && git fetch --all && git reset --hard origin/master
+    pip3 install -r material-theme-customized/requirements.txt
+    pip3 install mkdocs-redirects mkdocs-minify-plugin
+    cd ..
+    
+    echo "==> Installing Node.js dependencies for custom theme…"
+    echo "    If fails, install Node.js using Node Version Manager."
+    echo "    See https://rtapp.tk/community-lores/dev/devenv-setup for details."
+    command -v npm >/dev/null 2>&1 || { echo >&2 "❌ You must install Node.js and NPM first for JS dependencies. Aborting..."; exit 1; }
+    sudo apt install autoreconf
+    cd material-theme-customized && npm i
+fi
+
+if [[ -f "package.json" ]]; then
+    echo "==> Installing Node.js dependencies for main repo…"
+    echo "    This contains all-contributors and markdownlint, as per the Contributors' Guide."
+    npm i
+fi
+
+echo "✔ Successfully bootstrapped!"

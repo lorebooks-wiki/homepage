@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "==> Checking if there's dependencies installed..."
+echo "    This script should be called after the repo is successfully cloned"
+echo "    or if you need to reset to initial state without losing your work."
+rm -rf material-theme-customized || echo "❓ That local repository of custom theme isn't found. Whatever!"
+pip3 uninstall mkdocs Pygments markdown pymdown-extensions mkdocs-material-extensions mkdocs-minify-plugin mkdocs-redirects --yes
+
+echo "==> Firing up bootstrap script…"
+bash bin/bootstrap
+
+echo "✔ Setup successful!"
