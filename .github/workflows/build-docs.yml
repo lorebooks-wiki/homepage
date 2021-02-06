@@ -23,7 +23,7 @@ jobs:
 
       - name: Install Python dependencies
         run: |
-          pip install -r FOR_CICD_ONLY.requirements.txt
+          pip install -r requirements_gh-pages.txt
       - name: Deploy documentation
         run: |
           mkdocs gh-deploy --config-file mkdocs_cicd.yml

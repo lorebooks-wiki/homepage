@@ -20,7 +20,7 @@ if [[ -f "requirements.txt" ]]; then
     echo "    If fails, install Node.js using Node Version Manager."
     echo "    See https://rtapp.tk/community-lores/dev/devenv-setup for details."
     command -v npm >/dev/null 2>&1 || { echo >&2 "❌ You must install Node.js and NPM first for JS dependencies. Aborting..."; exit 1; }
-    sudo apt install autoreconf
+    sudo apt-get install autoreconf
     cd material-theme-customized && npm i
 fi
 
