@@ -1,0 +1,9 @@
+## The basics
+mkdocs
+git+https://github.com/Community-Lores/mkdocs-material.git
+
+## Plugins
+mkdocs-section-index
+mkdocs-git-authors-plugin
+mkdocs-git-revision-date-localized-plugin
+mkdocs-monorepo-plugin
