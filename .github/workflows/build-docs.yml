@@ -8,7 +8,7 @@ env:
   PYTHON_VERSION: 3.x
 
 jobs:
-  documentation:
+  publish-docs:
     name: Build documentation
     runs-on: ubuntu-20.04 # use latest LTS as possible
     steps:
@@ -24,6 +24,23 @@ jobs:
       - name: Install Python dependencies
         run: |
           pip install -r requirements_gh-pages.txt
-      - name: Deploy documentation
+      - name: Build documentation
         run: |
-          mkdocs gh-deploy --config-file mkdocs_cicd.yml
+          mkdocs build --config-file mkdocs_cicd.yml --verbose
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          ## If remixing on GitHub, don't forget to add your own personal token as a encrypted secret!
+          github_token: ${{ secrets.GH_SERVICE_ACCOUNT_API_KEY }}
+          ## Use the 'site' directory for deployment.
+          publish_dir: ./site
+          ## Make our GH Pages-built docs to accessible on the address below. Please edit this when remixing!
+          cname: gh-pages-en.handbooksbythepins.gq
+          allow_empty_commits: true
+          ## Keep the files in the 'gh-pages' branch.
+          keep_files: true
+          ## Use our service account for commits
+          user_name: 'Recap Time Bot'
+          user_email: 'service-accounts+github@devhubcentral.ml'
+          ## Customize our commit messages.
+          full_commit_message: "docs: Build success for ${{ github.event.head_commit.message }}"
