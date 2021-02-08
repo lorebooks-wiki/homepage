@@ -7,13 +7,12 @@ site_url: https://community-lores.github.io
 site_author: The Pins Team and the open-source community
 site_description: >-
   An collection of wikis and documentation in single place,
-  without ads and Google Analytics, just focusing youn on
-  the content.
+  without ads and Google Analytics, just focusing you on
+  the content you want.
 
 # Repository
-repo_name: squidfunk/mkdocs-material
-repo_url: https://github.com/squidfunk/mkdocs-material
-edit_uri: ""
+repo_name: Community-Lores/community-lores.github.io
+repo_url: https://github.com/Community-Lores/community-lores.github.io
 
 # Copyright
 copyright: Copyright &copy; 2021 The Pins Team and its contributors, licensed under CC BY-SA 4.0
