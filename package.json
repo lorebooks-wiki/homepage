@@ -1,0 +1,25 @@
+{
+  "name": "community-lores.github.io",
+  "version": "0.1.0",
+  "description": "Collection of wikis and docs in one place without Google Analytics bullshit.",
+  "main": "null",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Community-Lores/community-lores.github.io.git"
+  },
+  "author": "Open-Source Community <oss@madebythepins.tk>",
+  "license": "CC-BY-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/Community-Lores/community-lores.github.io/issues"
+  },
+  "homepage": "https://github.com/Community-Lores/community-lores.github.io#readme",
+  "dependencies": {
+    "markdownlint": "^0.23.0"
+  }
+}
