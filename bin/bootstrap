@@ -2,31 +2,87 @@
 
 set -e
 
+# https://gitlab.com/friendly-telegram/friendly-telegram/-/raw/master/install.sh
+echo "==> Installing Python and Node.js..."
+echo "    This might take a while to finish."
+sleep 3
+if echo "$OSTYPE" | grep -qE '^linux-gnu.*' && [ -f '/etc/debian_version' ]; then
+  PKGMGR="sudo apt-get install -y"
+  PYVER="3"
+elif echo "$OSTYPE" | grep -qE '^linux-gnu.*' && [ -f '/etc/arch-release' ]; then
+  PKGMGR="sudo pacman -Sy --noconfirm"
+  PYVER="3"
+elif echo "$OSTYPE" | grep -qE '^linux-android.*'; then
+  apt-get update
+  PKGMGR="apt-get install -y"
+  PYVER=""
+elif echo "$OSTYPE" | grep -qE '^darwin.*'; then
+  if ! command -v brew >/dev/null; then
+    ruby <(curl -fsSk https://raw.github.com/mxcl/homebrew/go)
+  fi
+  PKGMGR="brew install"
+else
+  echo "✖ This script was unsupported for this computer. Please, manually install dependencies instead."
+  exit 1
+fi
+if echo "$OSTYPE" | grep -qE '^linux-gnu.*'; then
+  $PKGMGR "python$PYVER-dev"
+  $PKGMGR "python$PYVER-pip"
+  $PKGMGR build-essential libwebp-dev libz-dev libjpeg-dev libffi-dev libcairo2 libopenjp2-7 libtiff5 libcairo2-dev
+elif echo "$OSTYPE" | grep -qE '^linux-android.*'; then
+  $PKGMGR openssl libjpeg-turbo libwebp libffi libcairo build-essential libxslt libiconv
+elif echo "$OSTYPE" | grep -qE '^darwin.*'; then
+  $PKGMGR jpeg webp
+fi
+IS_NODE_INSTALLED=$(command -v node)
+if [[ $IS_NODE_INSTALLED != "" ]]; then
+    if echo "$OSTYPE" | grep -qE '^linux-android.*'; then;
+        cp ~/.bashrc ~/.bashrc_bak || true
+        cp ~/.bash_profile ~/.bash_profile_bak || true
+        cp ~/.profile ~/.profile_bak || true
+        cp ~/.zshrc ~/.zshrc_bak || true
+        wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+        nvm install --lts
+        nvm use --lts
+    fi
+    wget -q0- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+fi
+
+
 if [[ -f "requirements.txt" ]]; then
     echo "==> Installing base Python dependencies…"
-    command -v pip3 >/dev/null 2>&1 || { echo >&2 "❌ Python3 is missing, please install it manually then run this again. Aborting..."; exit 1; }
+    command -v pip3 >/dev/null 2>&1
     pip3 install -r requirements.txt -U
 
     echo "==> Installing custom theme dependencies…"
     echo "    This might take some time since its requires cloning the whole repository"
     echo "    for the first time. If you have it, this script will do git pull instead."
-    command -v git >/dev/null 2>&1 || { echo >&2 "❌ You must install git to clone the custom theme repo. Aborting..."; exit 1; }
-    git clone https://github.com/Community-Lores/mkdocs-material.git material-theme-customized || cd material-theme-customized && git fetch --all && git pull
-    pip3 install -r requirements.txt
+    if [ ! -d "./material-theme-customized" ]; then
+	git clone https://github.com/Community-Lores/mkdocs-material.git material-theme-customized
+        cd material-theme-customized
+	    pip3 install -r requirements.txt -U
+    else
+        cd material-theme-customized
+        git fetch --all
+
+    fi
     pip3 install mkdocs-redirects mkdocs-minify-plugin
     cd ..
     
     echo "==> Installing Node.js dependencies for custom theme…"
     echo "    If fails, install Node.js using Node Version Manager."
     echo "    See https://rtapp.tk/community-lores/dev/devenv-setup for details."
-    command -v npm >/dev/null 2>&1 || { echo >&2 "❌ You must install Node.js and NPM first for JS dependencies. Aborting..."; exit 1; }
-    sudo apt-get install autoconf # http://askubuntu.com/questions/265471/ddg#490839
+    sleep 3
+    $PKGMGR autoconf # http://askubuntu.com/questions/265471/ddg#490839
     cd material-theme-customized && npm i
 fi
+
+cd ..
 
 if [[ -f "package.json" ]]; then
     echo "==> Installing Node.js dependencies for main repo…"
     echo "    This contains all-contributors and markdownlint, as per the Contributors' Guide."
+    sleep 3
     npm i
 fi
 
