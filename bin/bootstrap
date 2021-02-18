@@ -28,24 +28,28 @@ fi
 if echo "$OSTYPE" | grep -qE '^linux-gnu.*'; then
   $PKGMGR "python$PYVER-dev"
   $PKGMGR "python$PYVER-pip"
-  $PKGMGR build-essential libwebp-dev libz-dev libjpeg-dev libffi-dev libcairo2 libopenjp2-7 libtiff5 libcairo2-dev
 elif echo "$OSTYPE" | grep -qE '^linux-android.*'; then
-  $PKGMGR openssl libjpeg-turbo libwebp libffi libcairo build-essential libxslt libiconv
+  pkg update
+  termux-upgrade-repo || false
+  $PKGMGR python3
 elif echo "$OSTYPE" | grep -qE '^darwin.*'; then
-  $PKGMGR jpeg webp
+  $PKGMGR python3
 fi
 IS_NODE_INSTALLED=$(command -v node)
-if [[ $IS_NODE_INSTALLED != "" ]]; then
-    if echo "$OSTYPE" | grep -qE '^linux-android.*'; then;
+if [[ $IS_NODE_INSTALLED == "" ]]; then
+    if echo "$OSTYPE" | grep -qE '^linux-android.*'; then
         cp ~/.bashrc ~/.bashrc_bak || true
         cp ~/.bash_profile ~/.bash_profile_bak || true
         cp ~/.profile ~/.profile_bak || true
         cp ~/.zshrc ~/.zshrc_bak || true
-        wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+        wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
         nvm install --lts
         nvm use --lts
+    else
+    	wget -q0- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
     fi
-    wget -q0- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+else
+    echo "Looks like you have Node.js installed. Skipping Node Version Manager install..."
 fi
 
 
@@ -71,7 +75,7 @@ if [[ -f "requirements.txt" ]]; then
     
     echo "==> Installing Node.js dependencies for custom theme…"
     echo "    If fails, install Node.js using Node Version Manager."
-    echo "    See https://rtapp.tk/community-lores/dev/devenv-setup for details."
+    echo "    See https://rtapp.tk/community-lores-devenv-setup for details."
     sleep 3
     $PKGMGR autoconf # http://askubuntu.com/questions/265471/ddg#490839
     cd material-theme-customized && npm i

@@ -10,7 +10,7 @@ if [ $? -eq 0 ]; then
    if [ $? -eq 0]; then
       echo "✔ Successfully pulled remote changes!"
    else
-      "❌ Git just gave up because errors are fired up or merge conflicts are detected."
+      echo "❌ Git just gave up because errors are fired up or merge conflicts are detected."
    fi
 else
    echo "❌ 'git fetch' fired up some errors. If issue presists, store the runtime logs above and file a new issue in GitHub/GitLab.com"
