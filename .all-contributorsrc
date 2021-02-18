@@ -1,0 +1,37 @@
+{
+  "projectName": "community-lores.github.io",
+  "projectOwner": "Community-Lores",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "CONTRIBUTORS.md",
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "eslint",
+  "contributors": [
+    {
+      "login": "AndreiJirohHaliliDev2006",
+      "name": "Andrei Jiroh Eugenio Halili",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34998342?v=4",
+      "profile": "https://andreijiroh.tk/",
+      "contributions": [
+        "blog",
+        "bug",
+        "code",
+        "content",
+        "design",
+        "doc",
+        "ideas",
+        "infra",
+        "maintenance",
+        "review",
+        "security",
+        "test",
+        "tool"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
