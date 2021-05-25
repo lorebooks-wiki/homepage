@@ -1,5 +1,6 @@
 ## The basics
 mkdocs
+mkdocs-material
 
 ## Plugins
 mkdocs-section-index

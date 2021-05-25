@@ -1,4 +1,4 @@
-name: Lores Site Builder
+name: Project Homepage Builder
 on:
   push:
     branches:
@@ -27,19 +27,3 @@ jobs:
       - name: Build documentation
         run: |
           mkdocs build --config-file mkdocs_cicd.yml --verbose
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          ## If remixing on GitHub, don't forget to add your own personal token as a encrypted secret!
-          github_token: ${{ secrets.GH_SERVICE_ACCOUNT_API_KEY }}
-          ## Use the 'site' directory for deployment.
-          publish_dir: ./site
-          ## Make our GH Pages-built docs to accessible on the address below. Please edit this when remixing!
-          allow_empty_commits: true
-          ## Keep the files in the 'gh-pages' branch.
-          keep_files: true
-          ## Use our service account for commits
-          user_name: 'Recap Time Bot'
-          user_email: 'service-accounts+github@devhubcentral.ml'
-          ## Customize our commit messages.
-          full_commit_message: "docs: Successfully built website"

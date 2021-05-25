@@ -56,29 +56,7 @@ fi
 if [[ -f "requirements.txt" ]]; then
     echo "==> Installing base Python dependencies…"
     command -v pip3 >/dev/null 2>&1
-    pip3 install -r requirements.txt -U
-
-    echo "==> Installing custom theme dependencies…"
-    echo "    This might take some time since its requires cloning the whole repository"
-    echo "    for the first time. If you have it, this script will do git pull instead."
-    if [ ! -d "./material-theme-customized" ]; then
-	git clone https://github.com/Community-Lores/mkdocs-material.git material-theme-customized
-        cd material-theme-customized
-	    pip3 install -r requirements.txt -U
-    else
-        cd material-theme-customized
-        git fetch --all
-
-    fi
-    pip3 install mkdocs-redirects mkdocs-minify-plugin
-    cd ..
-    
-    echo "==> Installing Node.js dependencies for custom theme…"
-    echo "    If fails, install Node.js using Node Version Manager."
-    echo "    See https://rtapp.tk/community-lores-devenv-setup for details."
-    sleep 3
-    $PKGMGR autoconf # http://askubuntu.com/questions/265471/ddg#490839
-    cd material-theme-customized && npm i
+    pip3 install -r requirements.txt --upgrade --user
 fi
 
 cd ..

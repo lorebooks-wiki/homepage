@@ -10,38 +10,39 @@ site_description: >-
   without ads and Google Analytics, just focusing you on
   the content you want.
 
+# Lock the use-directory-urls flag
+use_directory_urls: true
+
 # Repository
-repo_name: Community-Lores/community-lores.github.io
-repo_url: https://github.com/Community-Lores/community-lores.github.io
+repo_url: https://github.com/Community-Lores/homepage
+edit_uri: edit/main/docs/
 
 # Copyright
 copyright: Copyright &copy; 2021 The Pins Team and its contributors, licensed under CC BY-SA 4.0
 
 theme:
-  # Since we're using our own fork of mkdocs-material, instead of the
-  # public and official release of it from PyPi or even the Insiders
-  # edition, the theme name should be nullified unless installed using
-  # `pip install .` on the material-theme-customized directory or installed
-  # from its repo as part of the normal install using the requirements file.
-  name: null
-  custom_dir: material-theme-customized
+  # https://github.com/squidfunk/mkdocs-material
+  name: material
 
-  # 404 page
-  static_templates:
-    - 404.html
-
-  # Necessary for search to work properly
-  include_search_page: false
-  search_index_only: true
-
-  # Default values, taken from mkdocs_theme.yml
-  language: en
-  font:
-    text: Roboto
-    code: Roboto Mono
-  favicon: assets/favicon.png
+  # for the sidebar/site icon on navbar
   icon:
-    logo: logo
+    logo: material/library
+
+  # theme for dark modes
+  theme:
+    palette:
+      - scheme: default
+        primary: green
+        accent: lime
+        toggle:
+          icon: material/toggle-switch-off-outline
+          name: Switch to dark mode
+      - scheme: slate
+        primary: deep orange
+        accent: amber
+        toggle:
+          icon: material/toggle-switch
+          name: Switch to light mode
 
 # Extensions
 markdown_extensions:
