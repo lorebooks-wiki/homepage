@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/old-path"
+  to = "https://github.com/Community-Lores/homepage"
+  status = 301
+  force = true
