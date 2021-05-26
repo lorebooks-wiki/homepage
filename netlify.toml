@@ -14,7 +14,7 @@
   command = "./bin/netlify-build"
 
   # Exit early if the source files are unedited
-  ignore = "git diff --quiet HEAD^ HEAD docs/ mkdocs*.yml netlify.toml"
+  ignore = "git diff --quiet HEAD^ HEAD docs/ mkdocs.yml mkdocs.dev.yml netlify.toml"
 
   [context.production]
   # special flag for our CI script to do some verbose stuff
