@@ -25,4 +25,4 @@
   environment = { SITE_DEPLOYMENT_TYPE = "development" }
 
   [context.deploy-preview]
-  environment = { SITE_DEPLOYMENT_TYPE = "development-contrib"
+  environment = { SITE_DEPLOYMENT_TYPE = "development-contrib" }
