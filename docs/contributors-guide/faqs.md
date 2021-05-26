@@ -2,6 +2,6 @@
 
 ## Why dafuq I need both Python3 and Node.fricking-js
 
-On the Python side, we need `mkdocs` (and its dependencies), and [our own fork of `mkdocs-material`][mkodcs-material].
+On the Python side, we need `mkdocs` (and its dependencies), and [the upstream version of `mkdocs-material`][mkodcs-material] (because we're abandoned our fork, lol).
 
-[mkodcs-material]: https://github.com/Community-Lores/mkdocs-material
+[mkodcs-material]: https://github.com/squidfunk/mkdocs-material
