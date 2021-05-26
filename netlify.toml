@@ -1,5 +1,28 @@
 [[redirects]]
-  from = "/old-path"
+  from = "/source"
   to = "https://github.com/Community-Lores/homepage"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/faq"
+  to = "/contributors-guide/faq"
+  status = 302
+
+[build]
+  publish = "site/"
+  command = "./bin/netlify-build"
+
+  # Exit early if the source files are unedited
+  ignore = "git diff --quiet HEAD^ HEAD docs/"
+
+  [context.production]
+  # special flag for our CI script to do some verbose stuff
+  # in build logs, otherwise we'll remove verbosey stuff
+  environment = { SITE_DEPLOYMENT_TYPE = "production" }
+
+  [context.branch-deploy]
+  environment = { SITE_DEPLOYMENT_TYPE = "development" }
+
+  [context.deploy-preview]
+  environment = { SITE_DEPLOYMENT_TYPE = "development-contrib"
