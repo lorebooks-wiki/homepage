@@ -5,8 +5,8 @@
   force = true
 
 [[redirects]]
-  from = "/faq"
-  to = "/contributors-guide/faq"
+  from = "/faqs"
+  to = "/contributors-guide/faqs"
   status = 302
 
 [build]
@@ -26,3 +26,17 @@
 
   [context.deploy-preview]
   environment = { SITE_DEPLOYMENT_TYPE = "development-contrib" }
+
+# Post-processing stuff
+[build.processing]
+  skip_processing = false
+[build.processing.css]
+  bundle = true
+  minify = false
+[build.processing.js]
+  bundle = true
+  minify = false
+[build.processing.html]
+  pretty_urls = true
+[build.processing.images]
+  compress = true
