@@ -1,3 +1,29 @@
-#!/bin/bash
-pip3 install --requirements requorements.txt
-mkdocs build --config-file mkdocs.yml --verbose
+#!/usr/bin/bash
+
+if [[ $SITE_DEPLOYMENT_TYPE == "" ];
+  SITE_DEPLOYMENT_TYPE=development
+fi
+
+echo "-----> Installing dependencies..."
+pip3 install --requirements requirements.txt
+
+echo "-----> Building documentation..."
+if [[ $SITE_DEPLOYMENT_TYPE == "development" ]]; then
+  echo "     [DEPLOY TO STAGING]"
+  mkdocs build --config-file mkdocs.yml --verbose
+elif [[ $SITE_DEPLOYMENT_TYPE == "development-contrib" ]]; then
+  echo "     [CONTRIBUTOR FLAG DETECTED]"
+  mkdocs builf --config-file mkdocs.yml --verbose
+else
+  echo "     [DEPLOYING TO PRODUCTION]"
+  mkdocs build --config-file mkdocs.yml -q
+fi
+
+EXIT_CODE=$?
+
+if [[ $EXIT_CODE != "0" ]]
+  echo "!      Site build failed, please reproduce the build command"
+  echo "       locally or re-run the build in 'development' flag to"
+  echo "       show issues and make the build logs more verbose."
+  exit $EXIT_CODE
+fi
