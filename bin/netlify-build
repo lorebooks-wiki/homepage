@@ -10,10 +10,10 @@ pip3 install --requirements requirements.txt
 echo "-----> Building documentation..."
 if [[ $SITE_DEPLOYMENT_TYPE == "development" ]]; then
   echo "     [DEPLOY TO STAGING]"
-  mkdocs build --config-file mkdocs.yml --verbose
+  mkdocs build --config-file mkdocs.dev.yml --verbose
 elif [[ $SITE_DEPLOYMENT_TYPE == "development-contrib" ]]; then
   echo "     [CONTRIBUTOR FLAG DETECTED]"
-  mkdocs builf --config-file mkdocs.yml --verbose
+  mkdocs build --config-file mkdocs.yml --verbose
 else
   echo "     [DEPLOYING TO PRODUCTION]"
   mkdocs build --config-file mkdocs.yml -q

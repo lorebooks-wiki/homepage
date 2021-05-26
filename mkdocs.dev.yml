@@ -1,0 +1,94 @@
+# base Mkdocs config file
+# see the main docs for info
+
+# Project information
+site_name: Community Lores - Recap Time
+site_url: https://staging.community-lores.gq
+site_author: The Pins Team and the open-source community
+site_description: >-
+  An collection of wikis and documentation in single place,
+  without ads and Google Analytics, just focusing you on
+  the content you want.
+
+# Lock the use-directory-urls flag
+use_directory_urls: true
+
+# Repository
+repo_url: https://github.com/Community-Lores/homepage
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2021 The Pins Team and its contributors, licensed under CC BY-SA 4.0
+
+theme:
+  # https://github.com/squidfunk/mkdocs-material
+  name: material
+
+  # for the sidebar/site icon on navbar
+  icon:
+    logo: material/library
+
+  # theme for dark modes
+  theme:
+    palette:
+      - scheme: default
+        primary: green
+        accent: lime
+        toggle:
+          icon: material/toggle-switch-off-outline
+          name: Switch to dark mode
+      - scheme: slate
+        primary: deep orange
+        accent: amber
+        toggle:
+          icon: material/toggle-switch
+          name: Switch to light mode
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page Tree
+nav:
+  - Home: index.md
+  - Code of Conduct: https://rtapp.tk/community-codeofconduct
+  - ToS: todo.md
+  - Contributors Guide:
+    - FAQs: contributors-guide/faqs.md
+    - Adding to database: contributors-guide/adding-to-database.md
