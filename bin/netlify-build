@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-if [[ $SITE_DEPLOYMENT_TYPE == "" ]];
+if [[ $SITE_DEPLOYMENT_TYPE == "" ]]; then
   SITE_DEPLOYMENT_TYPE=development
 fi
 
