@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-if [[ $SITE_DEPLOYMENT_TYPE == "" ];
+if [[ $SITE_DEPLOYMENT_TYPE == "" ]];
   SITE_DEPLOYMENT_TYPE=development
 fi
 
@@ -21,7 +21,7 @@ fi
 
 EXIT_CODE=$?
 
-if [[ $EXIT_CODE != "0" ]]
+if [[ $EXIT_CODE != "0" ]];
   echo "!      Site build failed, please reproduce the build command"
   echo "       locally or re-run the build in 'development' flag to"
   echo "       show issues and make the build logs more verbose."
