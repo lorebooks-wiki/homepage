@@ -1,7 +1,9 @@
 name: Test scripts for errors
 on:
-  - push
-  - pull_request
+  push:
+    branches: [ staging ]
+  pull_request:
+    branches: [ staging ]
 
 env:
   PYTHON_VERSION: 3.x
