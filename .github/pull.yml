@@ -1,0 +1,8 @@
+version: "1"
+rules:
+  - base: main
+    upstream: staging
+    mergeMethod: merge
+ #- base: staging
+ #  upstteam: Community-Lores:staging
+ #  mergeMethod: rebase

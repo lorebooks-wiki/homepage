@@ -1,0 +1,5 @@
+#!/bin/bash
+
+rm mkdocs.dev.yml
+cp mkdocs.yml mkdocs.dev.yml
+find ./mkdocs.dev.yml -type f -exec sed -i 's/community-lores.gq/staging.community-lores.gq/g' {} \;
