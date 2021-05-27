@@ -5,8 +5,8 @@
   force = true
 
 [[redirects]]
-  from = "/faqs"
-  to = "/contributors-guide/faqs"
+  from = "/contributors-guide/faqs"
+  to = "/faqs"
   status = 302
 
 [build]
