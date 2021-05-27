@@ -8,4 +8,4 @@ one place, written in Markdown and without ads, tracking, and Google Analytics
 The full directory is still and will be under work in progress, so we'll update the list below as the docs expands.
 
 * [FAQs](faqs)
-* [Contributors' Guide](controibutors-guide/index.md)
+* [Contributors' Guide](contributors-guide/index.md)
