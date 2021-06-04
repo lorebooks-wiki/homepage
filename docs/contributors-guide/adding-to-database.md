@@ -3,16 +3,20 @@
 Bringing your community's lore, wiki or whatever documentation your
 community call it into Community Lores helps keep the documentations in one place (you can keep your MediaWiki/Wiki.js/Google Docs/Notion-based documentation site up and use Community Lores as an backup in case of maintanenace).
 
+If you don't want to convert everything into Markdown and build your lore site with SSGs, skip to Option 2.
+
 ## What you need
 
-* **Either your community wiki exists within the last 3 months or your community needs a wiki.** If your wiki is newer than 3 months, please wait for up to 3 months before you apply. If you moving your docs/lore into us, you need to export everything into Markdown.
-* **Only active community wikis will be accepted** Dormat community wikis are instead go to <https://archived.lores.rtapp.tk>` website. Inactive/dormat community wikis or docs are only goes to the archives repo if these don't receive any edits/contributions (atleadt 20) within the last 6 months.
+* **Either your community wiki exists within the last 3 months or your community needs a wiki.** If your wiki is newer than 3 months, please wait for up to 3 months before you apply. If you moving your docs/lore into us, you need to export everything into Markdown. (If you prefer to redirect users instead, skip to Option 2 section.)
+* **Only active community wikis will be accepted** Dormat community wikis are instead go to <https://archived.community-lores.gq>` website. Inactive/dormat community wikis or docs are only goes to the archives repo if these don't receive any edits/contributions (atleadt 20) within the last 6 months. (Doesn't apply on redirects)
 * **You agree to our terms of service and code of conduct.** Please read it ahead of time. Here's the links for these:
     * ToS: https://lores.rtapp.tk/legal/ToS
     * Code of Conduct: <https://rtapp.tk/community-codeofconduct>
-* **You may also need to get your community verified.** See <https://github.com/RecapTime/verify/wiki> for details on how to get verified. If you request
+* **You may also need to get your community verified.** See <https://github.com/RecapTime/verify/wiki> for details on how to get verified. If you follow either option 1 or 2 without being verified, we'll handle this step for you, other than asking some questions.
 
-## Exporting your content
+## Option 1: Convert into Markdown and change domains.
+
+### Exporting your content
 
 Create an new repo [using this template](https://github.com/community-lores/lore-starter-pack/generate). It has Mkdocs and Material theme included with Gitpod configuration, Contributor Convenant CLI for listing bot code and non-code contributors and a few management scripts for you to get started.
 
@@ -21,9 +25,9 @@ Use automation tools to convert vendor-locked-in format into Markdown or write M
 * [Buttons](https://squidfunk.github.io/mkdocs-material/reference/buttons/)
 * [Tabs](https://squidfunk.github.io/mkdocs-material/reference/content-tabs/)
 * [Footnotes](https://squidfunk.github.io/mkdocs-material/reference/footnotes/)
-* ..and.more! Visit the [theme documentation](https://squidfunk.github.io/mkdocs-material/)
+* ..and.more! Visit the [theme documentation](https://squidfunk.github.io/mkdocs-material/) for details
 
-### Using Material Insider for Mkdocs
+#### Using Material Insider for Mkdocs
 
 !!! warning "DO NOT COMMIT YOUR GITHUB PAT INTO ANY FILE, INCLUDING `netlify.toml`!"
     If commited, GitHub will automatically revoke the offending PAT for security reasons.
@@ -40,11 +44,11 @@ Use automation tools to convert vendor-locked-in format into Markdown or write M
     * _I'm currently sponsoring @squidfunk and want ti use the Material fof Mkdocs Insiders theme instead of the public version._
     * _I'm generated my own GitHub PAT for specific use cases (using the Insider edition of Mkdocs Material theme)._
 
-## Picking the right domain (or an `.community-lores.gq` subdomain)
+### Choosing the right subfomain
 
 By default, every community docs hosted on the `Community-Lores` GitHub organization has its own Netlify project on `community-lores` Netlify org, and its own subdomain on `community-lores.gq` based on repo name.
 
-If you choose to go to the custom domain path, [let us know in the project homepage's issue tracker]() so we can set it and send you the instructions.
+If you choose to go to the custom domain path, [let us know in the project homepage's issue tracker](/source/issues) so we can set it and send you the instructions.
 
 When you told us to configure custom domains, CNAME records should point to the following domain, where `petsofnetlify` is your repo name in GitHub:
 
@@ -52,4 +56,8 @@ When you told us to configure custom domains, CNAME records should point to the 
 community-lores-petsofnetlify.netlify.app
 ```
 
-If you prefer, you can switch to GitHub Pages (or other static page hosting service) on your liking and configure custom domains yourself (your `lores.tk` will still be there, unless you asked us to transfer the Netlify site to you as part of transferring the repo out of the GitHub org).
+If you prefer, you can switch to GitHub Pages (or other static page hosting service) on your liking and configure custom domains yourself (your `.community-lores.gq` will still be there, unless you asked us to transfer the Netlify site to you as part of transferring the repo out of the GitHub org).
+
+## Option 2: Redirect to your existing site
+
+If you prefer to keep your existing domain and do an redirect instead, let us know in [the issue tracker](/source/issues) and we'll handle the rest for you.

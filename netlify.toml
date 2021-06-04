@@ -5,6 +5,12 @@
   force = true
 
 [[redirects]]
+  from = "/source/issues"
+  to = "https://github.com/Community-Lores/homepage/issues"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/contributors-guide/faqs"
   to = "/faqs"
   status = 302
