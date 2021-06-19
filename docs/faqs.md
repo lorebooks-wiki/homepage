@@ -12,9 +12,9 @@ We also need Node.js for Contributor Convenant and Commitizen.
 
 Yes, but you need to provide us details like:
 
-* A/AAAA/CNAME record to point into
+* A/AAAA/CNAME record to point into (if not provided, we'll host an redirect server instead)
 * Where your docs/lore/wiki site is hosted on (and what software)
-* And an slug for
+* And an slug so we can redirect traffic to yours
 
 ## Why you use an `.gq` domain instead of buying `lores.community`?
 
