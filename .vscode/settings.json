@@ -1,0 +1,12 @@
+{
+    "marquee.widgets.npm-stats.packageNames": [
+        "community-lores.github.io"
+    ],
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "staging"
+    ],
+    "yaml.completion": true,
+    "yaml.schemas": {
+        "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs*.yml"
+    }
+}
