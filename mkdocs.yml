@@ -1,10 +1,9 @@
-# base Mkdocs config file
-# see the main docs for info
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 
-# Project information
-site_name: Community Lores - Recap Time
-site_url: "https://community-lores.gq"
-site_author: The Pins Team and the open-source community
+# Project information, site metadata
+site_name: lorebooks.wiki
+site_url: "https://lorebooks.eu.org"
+site_author: Recap Time Squad and contributors
 site_description: >-
   An collection of wikis and documentation in single place,
   without ads and Google Analytics, just focusing you on
@@ -14,11 +13,12 @@ site_description: >-
 use_directory_urls: true
 
 # Repository
-repo_url: https://github.com/Community-Lores/homepage
-edit_uri: edit/staging/docs/
+repo_url: https://mau.dev/lorebooks.wiki/homepage
+repo_name: source at Maunium GitLab
+edit_uri: blob/staging/docs/
 
 # Copyright
-copyright: Copyright &copy; 2021 The Pins Team and its contributors, licensed under CC BY-SA 4.0
+copyright: Copyright &copy; 2021-present Recap Time Squad (formerly The Pins Team) and its contributors, licensed under CC BY-SA 4.0
 
 theme:
   # https://github.com/squidfunk/mkdocs-material
@@ -27,22 +27,22 @@ theme:
   # for the sidebar/site icon on navbar
   icon:
     logo: material/library
+    repo: fontawesome/brands/gitlab
 
   # theme for dark modes
-  theme:
-     palette:
-        - scheme: default
-          primary: green
-          accent: lime
-          toggle:
-            icon: material/toggle-switch-off-outline
-            name: Switch to dark mode
-        - scheme: slate
-          primary: deep orange
-          accent: amber
-          toggle:
-            icon: material/toggle-switch
-            name: Switch to light mode
+  palette:
+    - scheme: default
+      primary: green
+      accent: lime
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: green
+      accent: lime
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
 
 # Extensions
 markdown_extensions:
@@ -83,12 +83,31 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+plugins:
+  # to have revision dates on the build via git logs, set CI var to true
+  - git-revision-date-localized:
+      enable_creation_date: !ENV [CI, false]
+      enabled: !ENV [CI, false]
+      fallback_to_build_date: true
+  - redirects:
+      redirect_maps:
+        'tos.md': 'legal/tos.md'
+        'code-of-conduct.md': 'https://go.recaptime.eu.org/coc'
 
 # Page Tree
 nav:
   - Home: index.md
-  - Code of Conduct: https://rtapp.tk/community-codeofconduct
+  - Code of Conduct: https://go.recaptime.eu.org/coc
   - FAQs: faqs.md
-  - ToS: todo.md
-  - Contributors Guide:
-    - Adding to database: contributors-guide/adding-to-database.md
+  - Contribute:
+    - contribute/index.md
+    - "Contribute an new docs site": contribute/add-project.md
+    - "Transfer project maintainership": contribute/transfer-project.md
+  - Legal:
+    - legal/index.md
+    - Hosting ToS: legal/tos.md
+    - Privacy Policy for RecapTime.dev docs sites: legal/privacy-recaptimesquad.md
+
+extra:
+  generator: true # DO NOT DISABLE THIS!
+  

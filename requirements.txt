@@ -1,9 +1,9 @@
 ## The basics
-mkdocs
-mkdocs-material
+mkdocs-material==8.5.7
 
 ## Plugins
-mkdocs-section-index
-mkdocs-git-authors-plugin
-mkdocs-git-revision-date-localized-plugin
-mkdocs-monorepo-plugin
+mkdocs-section-index==0.3.4
+mkdocs-git-authors-plugin==0.6.4
+mkdocs-git-revision-date-localized-plugin==1.1.0
+mkdocs-monorepo-plugin==1.0.4
+mkdocs-redirects==1.2.0
