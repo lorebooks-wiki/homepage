@@ -9,13 +9,13 @@
   ],
   "imageSize": 100,
   "commit": true,
-  "commitConvention": "eslint",
+  "commitConvention": "angular",
   "contributors": [
     {
       "login": "ajhalili2006",
       "name": "Andrei Jiroh Eugenio Halili",
       "avatar_url": "https://avatars.githubusercontent.com/u/34998342?v=4",
-      "profile": "https://andreijiroh.tk/",
+      "profile": "https://andreijiroh.xyz/",
       "contributions": [
         "blog",
         "bug",
@@ -33,5 +33,6 @@
       ]
     }
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "contributorsSortAlphabetically": true
 }
