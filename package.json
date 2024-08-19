@@ -1,7 +1,7 @@
 {
-  "name": "community-lores.github.io",
+  "name": "@lorebooks-wiki",
   "version": "0.1.0",
-  "description": "Collection of wikis and docs in one place without Google Analytics bullshit.",
+  "description": "Homepage for the lorebooks.wiki domain service",
   "main": "null",
   "directories": {
     "doc": "docs"
@@ -12,15 +12,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Community-Lores/community-lores.github.io.git"
+    "url": "git+https://github.com/lorebooks-wiki/homepage"
   },
-  "author": "Open-Source Community <oss@madebythepins.tk>",
+  "author": {
+    "name": "Recap Time Squad",
+    "email": "opensource@crew.recaptime.dev"
+  },
   "license": "CC-BY-SA-4.0",
   "bugs": {
-    "url": "https://github.com/Community-Lores/community-lores.github.io/issues"
+    "url": "https://github.com/lorebooks-wiki/homepage"
   },
-  "homepage": "https://github.com/Community-Lores/community-lores.github.io#readme",
-  "dependencies": {
+  "homepage": "https://lorebooks.wiki",
+  "devDependencies": {
+    "all-contributors-cli": "^6.26.1",
     "markdownlint": "^0.23.0"
   }
 }

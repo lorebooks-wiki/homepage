@@ -1,6 +1,6 @@
 {
-  "projectName": "community-lores.github.io",
-  "projectOwner": "Community-Lores",
+  "projectName": "homepage",
+  "projectOwner": "lorebooks-wiki",
   "repoType": "github",
   "repoHost": "https://github.com",
   "files": [
@@ -12,7 +12,7 @@
   "commitConvention": "eslint",
   "contributors": [
     {
-      "login": "AndreiJirohHaliliDev2006",
+      "login": "ajhalili2006",
       "name": "Andrei Jiroh Eugenio Halili",
       "avatar_url": "https://avatars.githubusercontent.com/u/34998342?v=4",
       "profile": "https://andreijiroh.tk/",

@@ -5,19 +5,11 @@ if [[ $SITE_DEPLOYMENT_TYPE == "" ]]; then
 fi
 
 echo "-----> Installing dependencies..."
-pip3 install -r requirements.txt --upgrade --user
+pip3 install pipenv --user --upgrade
+pipenv install
 
 echo "-----> Building documentation..."
-if [[ $SITE_DEPLOYMENT_TYPE == "development" ]]; then
-  echo "     [DEPLOY TO STAGING]"
-  mkdocs build --config-file mkdocs.dev.yml --verbose
-elif [[ $SITE_DEPLOYMENT_TYPE == "development-contrib" ]]; then
-  echo "     [CONTRIBUTOR FLAG DETECTED]"
-  mkdocs build --config-file mkdocs.yml --verbose
-else
-  echo "     [DEPLOYING TO PRODUCTION]"
-  mkdocs build --config-file mkdocs.yml -q
-fi
+pipenv run mkdocs build --config-file mkdocs.yml --verbose
 
 EXIT_CODE=$?
 
