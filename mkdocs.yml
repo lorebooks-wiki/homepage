@@ -13,9 +13,9 @@ site_description: >-
 use_directory_urls: true
 
 # Repository
-repo_url: https://mau.dev/lorebooks.wiki/homepage
-repo_name: source at Maunium GitLab
+repo_url: https://github.com/lorebooks-wiki/homepage
 edit_uri: blob/staging/docs/
+docs_dir: src
 
 # Copyright
 copyright: Copyright &copy; 2021-present Recap Time Squad (formerly The Pins Team) and its contributors, licensed under CC BY-SA 4.0
@@ -26,8 +26,7 @@ theme:
 
   # for the sidebar/site icon on navbar
   icon:
-    logo: material/library
-    repo: fontawesome/brands/gitlab
+    logo: octicons/book-16
 
   # theme for dark modes
   palette:
@@ -43,6 +42,31 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
+
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
 
 # Extensions
 markdown_extensions:
@@ -63,8 +87,8 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.keys
@@ -79,10 +103,12 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
 plugins:
   # to have revision dates on the build via git logs, set CI var to true
   - git-revision-date-localized:
@@ -92,21 +118,24 @@ plugins:
   - redirects:
       redirect_maps:
         'tos.md': 'legal/tos.md'
-        'code-of-conduct.md': 'https://go.recaptime.eu.org/coc'
 
 # Page Tree
 nav:
-  - Home: index.md
-  - Code of Conduct: https://go.recaptime.eu.org/coc
-  - FAQs: faqs.md
-  - Contribute:
-    - contribute/index.md
-    - "Contribute an new docs site": contribute/add-project.md
-    - "Transfer project maintainership": contribute/transfer-project.md
+  - Hub:
+    - index.md
+    - faqs.md
+    - directory.md
+  - Docs:
+    - docs/index.md
+    - "Getting Started": docs/getting-started.md
+    - "Reserved subdomains": docs/reserved-subdomains.md
   - Legal:
     - legal/index.md
     - Hosting ToS: legal/tos.md
-    - Privacy Policy for RecapTime.dev docs sites: legal/privacy-recaptimesquad.md
+    - Privacy Policy:
+      - legal/privacy/index.md
+      - RecapTime.dev docs sites: legal/privacy/recaptime-dev.md
+    - Community Code of Conduct: https://policies.recaptime.dev/code-of-conduct
 
 extra:
   generator: true # DO NOT DISABLE THIS!
