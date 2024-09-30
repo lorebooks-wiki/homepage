@@ -2,32 +2,30 @@
 
 # Project information, site metadata
 site_name: lorebooks.wiki
-site_url: "https://lorebooks.eu.org"
+site_url: "https://lorebooks.wiki"
 site_author: Recap Time Squad and contributors
 site_description: >-
-  An collection of wikis and documentation in single place,
-  without ads and Google Analytics, just focusing you on
-  the content you want.
+  An domain service for your documentation and wiki sites.
 
 # Lock the use-directory-urls flag
 use_directory_urls: true
 
 # Repository
-repo_url: https://mau.dev/lorebooks.wiki/homepage
-repo_name: source at Maunium GitLab
+repo_url: https://github.com/lorebooks-wiki/homepage
 edit_uri: blob/staging/docs/
+docs_dir: src
 
 # Copyright
-copyright: Copyright &copy; 2021-present Recap Time Squad (formerly The Pins Team) and its contributors, licensed under CC BY-SA 4.0
+copyright: Copyright &copy; 2021-present Recap Time Squad and its contributors, licensed under CC BY-SA 4.0
 
+# themeing
 theme:
   # https://github.com/squidfunk/mkdocs-material
   name: material
 
   # for the sidebar/site icon on navbar
   icon:
-    logo: material/library
-    repo: fontawesome/brands/gitlab
+    logo: octicons/book-16
 
   # theme for dark modes
   palette:
@@ -43,6 +41,31 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
+
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
 
 # Extensions
 markdown_extensions:
@@ -63,8 +86,8 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.keys
@@ -79,11 +102,14 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
 plugins:
+  - search
   # to have revision dates on the build via git logs, set CI var to true
   - git-revision-date-localized:
       enable_creation_date: !ENV [CI, false]
@@ -92,21 +118,32 @@ plugins:
   - redirects:
       redirect_maps:
         'tos.md': 'legal/tos.md'
-        'code-of-conduct.md': 'https://go.recaptime.eu.org/coc'
+        'get-started': 'docs/getting-started.md'
 
 # Page Tree
 nav:
-  - Home: index.md
-  - Code of Conduct: https://go.recaptime.eu.org/coc
-  - FAQs: faqs.md
-  - Contribute:
-    - contribute/index.md
-    - "Contribute an new docs site": contribute/add-project.md
-    - "Transfer project maintainership": contribute/transfer-project.md
+  - Hub:
+    - index.md
+    - faqs.md
+    - directory.md
+    - Visit recaptime.dev: https://recaptime.dev
+  - Docs:
+    - docs/index.md
+    - "Issue tracker": docs/issue-tracker.md
+    - "Getting Started": docs/getting-started.md
+    - "Reserved subdomains": docs/reserved-subdomains.md
+    - Troublehsooting: docs/troubleshooting.md
+    - Setup:
+      - Managing DNS records: docs/setup/dns-records.md
+      - Setting up redirects: docs/setup/redirects.md
+      - Parking pages: docs/setup/parking.md
   - Legal:
     - legal/index.md
     - Hosting ToS: legal/tos.md
-    - Privacy Policy for RecapTime.dev docs sites: legal/privacy-recaptimesquad.md
+    - Privacy Policy:
+      - legal/privacy/index.md
+      - RecapTime.dev docs sites: legal/privacy/recaptime-dev.md
+    - Community Code of Conduct: https://policies.recaptime.dev/code-of-conduct
 
 extra:
   generator: true # DO NOT DISABLE THIS!
