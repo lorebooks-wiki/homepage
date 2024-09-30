@@ -2,7 +2,10 @@
 
 Effective: TBD / Last modified: TBD
 
-This Terms of Service outlines the policies we enforce in content hosted under `lorebooks.wiki` domain service
+This Terms of Service outlines the policies we enforce in content hosted under `lorebooks.wiki`
+domain service, including our Hosting and Acceptable Use Policy. The
+[Community Code of Conduct] is also part of your agreement with this ToS in terms of
+community participation in Recap Time Squad's community and technical spaces.
 
 ## Hosting Policy
 
@@ -17,21 +20,37 @@ non-commerical use only.
 in  the [proxypartylab issue tracker] or configure redirects on your own.
 * Your documentation or wiki content is licensed under a free license such as [Creative Commons licenses].
 If the content uses non-free third-party content, it should be used acorrding to fair use and fair dealing policies.
+Exceptions are available for selected closed-sourced cloud services.
 * If your documentation or wiki website does not use a open-source wiki software and uses a static site generator
 or similar tool, these must be licensed under a [OSI-approved open-source license].
-* You agree to Recap Time Squad [Community Code of Conduct](https://policies.recaptime.dev/code-of-conduct)
+* You agree to Recap Time Squad [Community Code of Conduct]
 and your community has adopted its own code of conduct and is being actively enforced.
 
-We reserve the right to reject requests or entirely block projects at our discretion if we think
-a documentation or wiki site caused us legal harm or caused someone a life-threatening harm or if it
-is abusive.
+We reserve the right to reject requests or entirely block projects at our discretion
+if we think a documentation or wiki site caused us legal harm or caused someone a
+life-threatening harm or if it is abusive.
+
+The Acceptable Use Policy below clarifies our hosting policy also lists down
+what's not allowed that are not covered in this policy.
+
+### Exceptions
+
+Currently, we exempt the following docs hosting services and
+static site generators from the OSI-approved open-source license requirement:
+
+* [GitBook](https://gitbook.io)
+* [Obsidian Publish](https://obsidian.md/publish)
+
+If yours is not in the list, [let us know](../docs/issue-tracker.md) and we'll look into it.
 
 ## Acceptable Use Policy
 
-The `lorebooks.wiki` domain service is provided for the purpose of providing free subdomains to
-documentation and wiki websites.  However, this does not mean they may be used for **any** purpose.
-Like [the Obl.ong domain service](https://codeberg.org/oblong/conduct#acceptable-use-policy), we prohibit
-use of our subdomains for any of the behaviors listed above as unacceptable, and for any of the following:
+The `lorebooks.wiki` domain service is provided for the purpose of providing free
+subdomains to documentation and wiki websites.  However, this does not mean they
+may be used for **any** purpose.
+Like [the Obl.ong domain service](https://codeberg.org/oblong/conduct#acceptable-use-policy),
+we prohibit use of our subdomains for any of the behaviors listed above as unacceptable,
+and for any of the following:
 
 - any activities that intend to or actually generate profits for shareholders or do not act in the public interest
 - any form of malware (which includes, without limitation, malicious code or software
@@ -76,11 +95,13 @@ action.
 
 ## Policy updates
 
+When we are implementing any policy changes for this service, you'll be notified through 
+
 ## Reporting abusive content and behavior
 
-For reporting abusive content and subdomains, please email `abuse@recaptime.dev`, wihout
-email attachments, and include any proof that the content or subdomain in question is
-abusive.
+For reporting abusive content and subdomains, please email `abuse@recaptime.dev`,
+wihout email attachments, and include any proof that the content or subdomain
+in question is abusive. You can also use [this form]
 
 For reporting abusive behavior (including violations of the Community Code of Conduct),
 you can reach us at `squad@crew.recaptime.dev` or [contact a squad member directly].
@@ -99,3 +120,5 @@ Mastodon instance about page.
 [queer.party]: https://queer.party/about
 [Obl.ong Code of Conduct]: https://codeberg.org/oblong/conduct/src/commit/main/README.md
 [OSI-approved open-source license]: https://opensource.org/licenses
+[Community Code of Conduct]: https://policies.recaptime.dev/code-of-conduct
+[this form]: https://tally.so/r/mOo0Rm

@@ -15,3 +15,7 @@ mkdocs-redirects = "*"
 
 [requires]
 python_version = "3.12"
+
+[scripts]
+serve = "mkdocs serve --livereload --verbose --use-directory-urls"
+build = "mkdocs build --site public --verbose --use-directory-urls"

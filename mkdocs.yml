@@ -2,12 +2,10 @@
 
 # Project information, site metadata
 site_name: lorebooks.wiki
-site_url: "https://lorebooks.eu.org"
+site_url: "https://lorebooks.wiki"
 site_author: Recap Time Squad and contributors
 site_description: >-
-  An collection of wikis and documentation in single place,
-  without ads and Google Analytics, just focusing you on
-  the content you want.
+  An domain service for your documentation and wiki sites.
 
 # Lock the use-directory-urls flag
 use_directory_urls: true
@@ -18,8 +16,9 @@ edit_uri: blob/staging/docs/
 docs_dir: src
 
 # Copyright
-copyright: Copyright &copy; 2021-present Recap Time Squad (formerly The Pins Team) and its contributors, licensed under CC BY-SA 4.0
+copyright: Copyright &copy; 2021-present Recap Time Squad and its contributors, licensed under CC BY-SA 4.0
 
+# themeing
 theme:
   # https://github.com/squidfunk/mkdocs-material
   name: material
@@ -110,6 +109,7 @@ markdown_extensions:
   - pymdownx.tilde
 
 plugins:
+  - search
   # to have revision dates on the build via git logs, set CI var to true
   - git-revision-date-localized:
       enable_creation_date: !ENV [CI, false]
@@ -118,6 +118,7 @@ plugins:
   - redirects:
       redirect_maps:
         'tos.md': 'legal/tos.md'
+        'get-started': 'docs/getting-started.md'
 
 # Page Tree
 nav:
@@ -125,10 +126,17 @@ nav:
     - index.md
     - faqs.md
     - directory.md
+    - Visit recaptime.dev: https://recaptime.dev
   - Docs:
     - docs/index.md
+    - "Issue tracker": docs/issue-tracker.md
     - "Getting Started": docs/getting-started.md
     - "Reserved subdomains": docs/reserved-subdomains.md
+    - Troublehsooting: docs/troubleshooting.md
+    - Setup:
+      - Managing DNS records: docs/setup/dns-records.md
+      - Setting up redirects: docs/setup/redirects.md
+      - Parking pages: docs/setup/parking.md
   - Legal:
     - legal/index.md
     - Hosting ToS: legal/tos.md

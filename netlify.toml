@@ -1,26 +1,21 @@
 [[redirects]]
   from = "/source"
-  to = "https://github.com/Community-Lores/homepage"
+  to = "https://github.com/lorebooks-wiki/homepage"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/source/issues"
-  to = "https://github.com/Community-Lores/homepage/issues"
+  from = "/issues"
+  to = "/docs/issue-tracker"
   status = 301
   force = true
-
-[[redirects]]
-  from = "/contributors-guide/faqs"
-  to = "/faqs"
-  status = 302
 
 [build]
   publish = "site/"
   command = "./bin/netlify-build"
 
   # Exit early if the source files are unedited
-  ignore = "git diff --quiet HEAD^ HEAD docs/ mkdocs.yml mkdocs.dev.yml netlify.toml bin/netlify-build"
+  ignore = "git diff --quiet HEAD^ HEAD src/ mkdocs.yml mkdocs.dev.yml netlify.toml bin/netlify-build"
 
   [context.production]
   # special flag for our CI script to do some verbose stuff
