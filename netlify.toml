@@ -15,18 +15,7 @@
   command = "./bin/netlify-build"
 
   # Exit early if the source files are unedited
-  ignore = "git diff --quiet HEAD^ HEAD src/ mkdocs.yml mkdocs.dev.yml netlify.toml bin/netlify-build"
-
-  [context.production]
-  # special flag for our CI script to do some verbose stuff
-  # in build logs, otherwise we'll remove verbosey stuff
-  environment = { SITE_DEPLOYMENT_TYPE = "production" }
-
-  [context.branch-deploy]
-  environment = { SITE_DEPLOYMENT_TYPE = "development" }
-
-  [context.deploy-preview]
-  environment = { SITE_DEPLOYMENT_TYPE = "development-contrib" }
+  ignore = "git diff --quiet HEAD^ HEAD src/ mkdocs.yml netlify.toml bin/netlify-build"
 
 # Post-processing stuff
 [build.processing]
