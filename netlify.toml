@@ -15,7 +15,7 @@
   command = "./bin/netlify-build"
 
   # Exit early if the source files are unedited
-  ignore = "git diff --quiet HEAD^ HEAD src/ mkdocs.yml netlify.toml bin/netlify-build"
+  #ignore = "git diff --quiet HEAD^ HEAD src/ mkdocs.yml netlify.toml bin/netlify-build"
 
 # Post-processing stuff
 [build.processing]
