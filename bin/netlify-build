@@ -5,11 +5,10 @@ if [[ $SITE_DEPLOYMENT_TYPE == "" ]]; then
 fi
 
 echo "-----> Installing dependencies..."
-pip3 install pipenv --user --upgrade
 pipenv install
 
 echo "-----> Building documentation..."
-pipenv run mkdocs build --config-file mkdocs.yml --verbose
+pipenv run mkdocs build -f mkdocs.yml --verbose
 
 EXIT_CODE=$?
 
