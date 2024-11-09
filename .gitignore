@@ -244,3 +244,6 @@ dist
 *.swp
 *.save
 ### for Node.js - END ###
+
+# Local Netlify folder
+.netlify

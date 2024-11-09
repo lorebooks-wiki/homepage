@@ -26,6 +26,7 @@
   "homepage": "https://lorebooks.wiki",
   "devDependencies": {
     "all-contributors-cli": "^6.26.1",
-    "markdownlint": "^0.23.0"
+    "markdownlint": "^0.23.0",
+    "netlify-cli": "^17.36.3"
   }
 }
