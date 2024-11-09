@@ -1,5 +1,7 @@
 {
-    "md009": false,
+    "MD009": false,
+    "MD013": false,
+    "MD025": false,
     "no-trailing-punctuation": false,
     "first-line-h1": false,
     "html": false
