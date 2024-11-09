@@ -1,7 +1,10 @@
 # Getting started: Setup your `.lorebooks.wiki` subdomain
 
-Getting your `.lorebooks.wiki` subdomain is as easy as submitting a ticket in our issue tracker
-or sending a patch to our DNS configuration in YAML or our Caddyfiles in proxypartylab repository.
+Getting your `.lorebooks.wiki` subdomain is as easy as submitting a ticket in the
+[registry repository] or [setting up a redirect].
+
+[registry repository]: https://github.com/lorebooks-wiki/registry
+[setting up a redirect]: ./setup/redirects.md
 
 ## Preflight
 
@@ -12,23 +15,27 @@ or sending a patch to our DNS configuration in YAML or our Caddyfiles in proxypa
 ### Hosting Tos and AUP
 
 It is important to follow the hosting terms and the Acceptable Use Policy to ensure that this
-domain service will be available freely for years to come. Non-compilance will make us ban
-your project from this service and utlimately you from Recap Time Squad technical and
-community spaces if you host abusive and illegal content and your (or your community's)
-behavior is abusive and breaking the law.
+domain service will be available freely for years to come. Non-compilance will
+make us ban your project from this service and utlimately you from Recap Time
+Squad technical and community spaces if you host abusive and illegal content and
+your (or your community's) behavior is abusive and breaking the law.
 
 ### Contact details
 
 As part of your agreement with the Hosting ToS and AUP, we need your contact details,
-preferably over email (or a private mailing list with just project maintainers who have
-access to entire message history)
+preferably over email (or a private mailing list with just project maintainers
+who have access to entire message history).
+
+If you are uncomfortable with publicly sharing your email, let us know and we'll
+provide a way for that.
 
 ### Checking if your subdomain is in use
 
-Run a quick `dig <CNAME|A|AAAA> <your-preferred-subdomain>.lorebooks.wiki` on your terminal
-(or [open whatsmydns.net](https://whatsmydns.net), enter your desired subdomain and select
-`A`, `AAAA` or `CNAME` as DNS record type to look up to and hit `Search`), replacing the
-placeholder `<your-preferred-subdomain>` with your desired subdomain. If it is unused,
+Run a quick `dig <CNAME|A|AAAA> <your-preferred-subdomain>.lorebooks.wiki`
+on your terminal (or [open whatsmydns.net](https://whatsmydns.net),
+enter your desired subdomain and select `A`, `AAAA` or `CNAME` as DNS record
+type to look up to and hit `Search`), replacing the placeholder `<your-preferred-subdomain>`
+with your desired subdomain. If it is unused,
 you should expect wildcard DNS records pointing to `proxyparty.recaptime.dev`.
 
 ```
@@ -99,9 +106,10 @@ proxyparty.recaptime.dev. 300   IN      AAAA    2600:1900:4001:b0b::
 ```
 
 When in doubt, check the [reserved subdomains list], our [octoDNS DNS records-as-YAML configuration]
-and [Caddyfile configuration] to see if it is used by someone else or reserved for internal use.
-Please contact us via the issue tracker to see if it is possible to rename or if it involves
-trademark use. You can also opt to navigate directly to check if any real content is hosted there.
+and [Caddyfile configuration] to see if it is used by someone else or reserved
+for internal use. Please contact us via the issue tracker to see if it is
+possible to rename or if it involves trademark use. You can also opt to
+navigate directly to check if any real content is hosted there.
 
 === "Example subdomain with parking page"
 
@@ -134,13 +142,18 @@ If your documentation or wiki site is hosted on a server (either in the cloud or
 make sure it is static, otherwise you'll be clogging the patch review queue and causing
 us headaches.
 
-## Adding DNS records to your subdomain
+## Setting it up
 
-### Via the issue tracker
+Depending on your chosen setup, we separate them into different documentation pages, as listed below:
 
+* [Adding or updating DNS records](./setup/dns-records.md)
+* [Parking a subdomain](./setup/parking.md)
+* [Redirect somewhere else](./setup/redirects.md)
 
-### By editing the YAML file
+## Done
 
+Congratulations, your docs site is now on `lorebooks.wiki` domain! 🎉 If your hosting provider requires additional steps
+in verifying domain ownership, please let us know [in the issue tracker](./issue-tracker.md).
 
 
 [reserved subdomains list]: ./reserved-subdomains.md

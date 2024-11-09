@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 
 # Project information, site metadata
-site_name: lorebooks.wiki
+site_name: Community Lorebooks
 site_url: "https://lorebooks.wiki"
 site_author: Recap Time Squad and contributors
 site_description: >-
@@ -16,7 +16,8 @@ edit_uri: blob/staging/docs/
 docs_dir: src
 
 # Copyright
-copyright: Copyright &copy; 2021-present Recap Time Squad and its contributors, licensed under CC BY-SA 4.0
+copyright: >-
+  Copyright &copy; 2021-present Recap Time Squad and its contributors, licensed under CC BY-SA 4.0. Recap Time Squad is <a href="https://hackclub.com/fiscal-sponsorship">fiscally sponsored</a> by <a href="https://hackfoundation.org">The Hack Foundation</a> (d.b.a. <a href="https://hackclub.com">Hack Club</a>), a 501(c)(3) US nonprofit (EIN: 81-2908499).
 
 # themeing
 theme:
@@ -29,17 +30,22 @@ theme:
 
   # theme for dark modes
   palette:
-    - scheme: default
-      primary: green
-      accent: lime
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: cyan
       toggle:
-        icon: material/toggle-switch-off-outline
+        icon: material/brightness-7
         name: Switch to dark mode
-    - scheme: slate
-      primary: green
-      accent: lime
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: cyan
       toggle:
-        icon: material/toggle-switch
+        icon: material/brightness-4
         name: Switch to light mode
 
   features:
@@ -126,17 +132,18 @@ nav:
     - index.md
     - faqs.md
     - directory.md
-    - Visit recaptime.dev: https://recaptime.dev
+    - donate.md
   - Docs:
     - docs/index.md
     - "Issue tracker": docs/issue-tracker.md
     - "Getting Started": docs/getting-started.md
     - "Reserved subdomains": docs/reserved-subdomains.md
-    - Troublehsooting: docs/troubleshooting.md
+    - Troubleshooting: docs/troubleshooting.md
     - Setup:
       - Managing DNS records: docs/setup/dns-records.md
       - Setting up redirects: docs/setup/redirects.md
       - Parking pages: docs/setup/parking.md
+  - Project Financial Records: https://hcb.hackclub.com/recaptime-dev
   - Legal:
     - legal/index.md
     - Hosting ToS: legal/tos.md
@@ -144,6 +151,7 @@ nav:
       - legal/privacy/index.md
       - RecapTime.dev docs sites: legal/privacy/recaptime-dev.md
     - Community Code of Conduct: https://policies.recaptime.dev/code-of-conduct
+  - RecapTime.dev Homepage: https://recaptime.dev
 
 extra:
   generator: true # DO NOT DISABLE THIS!

@@ -5,13 +5,14 @@ when you have your own domain and you need to reserve the
 
 ## The easy route
 
-[Use this GitHub issue form] and follow instructions on how to fill it up. Once we approved the request,
-we'll take care the rest.
+[Use this GitHub issue form] and follow instructions on how to fill it up. Once
+we approved the request, we'll take care the rest.
 
-Alternatively, send a email in [plain-text] to [lorebooks.wiki-discuss] mailing list on sourcehut,
-with subject `[proxypartylab]: Request to add for your-desired-subdomain.lorebooks.wiki` and using
-the template below. Remember to replace any placeholders into real ones like your `.lorebooks.wiki`
-subdomain and the target URL for redirects.
+Alternatively, send a email in [plain-text] to [lorebooks.wiki-discuss] mailing
+list on sourcehut, with subject `[proxypartylab]: Request to add for
+your-desired-subdomaim.lorebooks.wiki` and using the template below.
+Remember to replace any placeholders into real ones like your
+`.lorebooks.wiki` subdomain and the target URL for redirects.
 
 ```txt
 ### Domain to be added
