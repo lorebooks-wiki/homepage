@@ -17,5 +17,6 @@ mkdocs-redirects = "*"
 python_version = "3.12"
 
 [scripts]
+dev = "pipenv run serve"
 serve = "mkdocs serve --livereload --verbose --use-directory-urls"
 build = "mkdocs build --site public --verbose --use-directory-urls"

@@ -7,7 +7,7 @@ on:
 
 env:
   PYTHON_VERSION: 3.x
-  NODE_VERSION: 14.x # Bumped from 12.x
+  NODE_VERSION: 22.x # Bumped from 12.x
 
 jobs:
   script-simulator:

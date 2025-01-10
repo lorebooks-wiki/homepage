@@ -1,6 +1,6 @@
 # Terms of Service
 
-Effective: TBD / Last modified: TBD
+Effective: Februrary 1, 2025 / Last modified: January 10, 2025
 
 This Terms of Service outlines the policies we enforce in content hosted under `lorebooks.wiki`
 domain service, including our Hosting and Acceptable Use Policy. The
@@ -23,8 +23,9 @@ If the content uses non-free third-party content, it should be used acorrding to
 Exceptions are available for selected closed-sourced cloud services.
 * If your documentation or wiki website does not use a open-source wiki software and uses a static site generator
 or similar tool, these must be licensed under a [OSI-approved open-source license].
-* You agree to Recap Time Squad [Community Code of Conduct]
-and your community has adopted its own code of conduct and is being actively enforced.
+Exceptions are available for selected closed-sourced cloud services.
+* You agree to Recap Time Squad [Community Code of Conduct] and your community has
+adopted its own code of conduct and is being actively enforced.
 
 We reserve the right to reject requests or entirely block projects at our discretion
 if we think a documentation or wiki site caused us legal harm or caused someone a
@@ -52,35 +53,37 @@ Like [the Obl.ong domain service](https://codeberg.org/oblong/conduct#acceptable
 we prohibit use of our subdomains for any of the behaviors listed above as unacceptable,
 and for any of the following:
 
-- any activities that intend to or actually generate profits for shareholders or do not act in the public interest
-- any form of malware (which includes, without limitation, malicious code or software
+* any activities that intend to or actually generate profits for shareholders or
+  do not act in the public interest
+* any form of malware (which includes, without limitation, malicious code or software
   that may affect the operation of the Internet);
-- any form of botnets, spam, or phishing;
-- interfering with or disrupting servers or networks, or disobeying any requirements,
+* any form of botnets, spam, or phishing;
+* interfering with or disrupting servers or networks, or disobeying any requirements,
   procedures, policies, or regulation of networks;
-- harming minors in any way, including the distribution of child pornographic images;
-- distributing or hosting any adult content, including but not limited to, pornographic images or videos.
-- impersonating any person or entity, including, but not limited to, an official, forum
-  leader, guide or host, or falsely stating or otherwise misrepresenting its affiliation
-  with a person or entity;
-- using a domain name for activity comprising or contributing to piracy, trademark or
+* harming minors in any way, including the distribution of child pornographic images;
+* distributing or hosting any adult content, including but not limited to,
+  pornographic images or videos.
+* impersonating any person or entity, including, but not limited to, an official,
+forum leader, guide or host, or falsely stating or otherwise misrepresenting its
+  affiliation with a person or entity;
+* using a domain name for activity comprising or contributing to piracy, trademark or
   copyright infringement, fraudulent or deceptive practices, counterfeiting, or other
   illegal activity;
-- insighting or promoting violence against any person or groups of persons, which shall
-include but is not limited to LGBTQIA+ and/or disabled persons and minorities;
-- bullying, engaging in cyber bullying, or inciting others to bully;
-- harassing, or encouraging others to harass or harm others;
-- stalking;
-- abusive intent to cause fear or threaten violence;
-- hate speech (including homophobia, transphobia, queerphobia, racism, sexism, ableism,
+* insighting or promoting violence against any person or groups of persons, which
+  shall include but is not limited to LGBTQIA+ and/or disabled persons and minorities;
+* bullying, engaging in cyber bullying, or inciting others to bully;
+* harassing, or encouraging others to harass or harm others;
+* stalking;
+* abusive intent to cause fear or threaten violence;
+* hate speech (including homophobia, transphobia, queerphobia, racism, sexism, ableism,
   casteism, xenophobia, antisemitism, islamophobia, and other forms of bigotry);
-- content which may be illegal under United States law;
-- content containing Nazi symbolism, ideology, and the promotion thereof;
-- content which claims to forbid/disavow abusive or hateful conduct, but which permits
+* content which may be illegal under United States law;
+* content containing Nazi symbolism, ideology, and the promotion thereof;
+* content which claims to forbid/disavow abusive or hateful conduct, but which permits
   "respectful" "discussions" of "unpopular opinions"/"controversial views" (dessert pizza
   is an unpopular opinion, trans folks' right to live a happy life is not, and hate is hate
   regardless of how dressed-up it is);
-- any other activity intended to organize, coordinate, or otherwise enable any of the above.
+* any other activity intended to organize, coordinate, or otherwise enable any of the above.
 
 Registrations are prohibited to parties that are, or associated with, recognized
 hate groups, or are otherwise engaged in hate speech.
@@ -95,16 +98,15 @@ action.
 
 ## Policy updates
 
-When we are implementing any policy changes for this service, you'll be notified through 
+When we are implementing any policy changes for this service, you'll be notified
+through your email address on file with us.
 
 ## Reporting abusive content and behavior
 
-For reporting abusive content and subdomains, please email `abuse@recaptime.dev`,
-wihout email attachments, and include any proof that the content or subdomain
-in question is abusive. You can also use [this form]
-
-For reporting abusive behavior (including violations of the Community Code of Conduct),
-you can reach us at `squad@crew.recaptime.dev` or [contact a squad member directly].
+For reporting abusive content and subdomains (including abusive behavior), please
+email `abuse@recaptime.dev`, with email attachments (or as a file link in cloud services
+to minimize email size), and include any proof that the content or subdomain in question is
+abusive.
 
 ## Attribution
 
