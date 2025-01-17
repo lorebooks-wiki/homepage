@@ -1,9 +1,9 @@
 # Terms of Service
 
-Effective: Februrary 1, 2025 / Last modified: January 10, 2025
+_**Last updated**: January 18, 2025 (effective February 1, 2025)_
 
-This Terms of Service outlines the policies we enforce in content hosted under `lorebooks.wiki`
-domain service, including our Hosting and Acceptable Use Policy. The
+This Terms of Service outlines the policies we enforce in content hosted under
+`lorebooks.wiki` domain service, including our Hosting and Acceptable Use Policy. The
 [Community Code of Conduct] is also part of your agreement with this ToS in terms of
 community participation in Recap Time Squad's community and technical spaces.
 
@@ -11,47 +11,37 @@ community participation in Recap Time Squad's community and technical spaces.
 
 By claiming your `*.lorebooks.wiki` subdomain, you agree the following:
 
-* You must share your email address or another contact method with Recap Time Squad for purposes of
-receiving administrative notifications and as a point of contact in case of abuse reports.
-* Your documentation or wiki website is for a non-profit/non-commerical open-source project or for
-non-commerical use only.
+* You must share your email address or another contact method with Recap Time Squad for purposes of receiving administrative notifications and as a point of contact in case of abuse reports.
+* Your website should use open-source software in both its frontend and backend code, under any [OSI-approved licenses][osi-approved].
+* Your subdomain/project is for a non-profit/non-commerical open-source project or for non-commerical use only.
 * Any content that deem illegal under the US federal law or Philippine law are not premitted.
-* If your project or community has its own domain, you must either [request to enable redirects]
-in  the [proxypartylab issue tracker] or configure redirects on your own.
-* Your documentation or wiki content is licensed under a free license such as [Creative Commons licenses].
-If the content uses non-free third-party content, it should be used acorrding to fair use and fair dealing policies.
-Exceptions are available for selected closed-sourced cloud services.
-* If your documentation or wiki website does not use a open-source wiki software and uses a static site generator
-or similar tool, these must be licensed under a [OSI-approved open-source license].
-Exceptions are available for selected closed-sourced cloud services.
-* You agree to Recap Time Squad [Community Code of Conduct] and your community has
-adopted its own code of conduct and is being actively enforced.
+* If your project or community has its own domain, you must configure redirects on your own or [use our redirection service][proxyparty].
+* Your documentation or wiki content is licensed under a free license such as [Creative Commons licenses]. If the content uses non-free third-party content, it should be used acorrding to fair use and fair dealing policies in applicable judristictions. Exceptions are available for selected closed-sourced cloud services and hosted services (if that software has seperate business/enterprise editions with non-free license).
+* You agree to Recap Time Squad [Community Code of Conduct] and your community has adopted its own code of conduct and is being actively enforced.
 
-We reserve the right to reject requests or entirely block projects at our discretion
-if we think a documentation or wiki site caused us legal harm or caused someone a
-life-threatening harm or if it is abusive.
+We reserve the right to reject requests or entirely block projects and websites at our discretion if we think a documentation or wiki site caused us legal harm or caused someone a life-threatening harm or if it is abusive.
 
-The Acceptable Use Policy below clarifies our hosting policy also lists down
-what's not allowed that are not covered in this policy.
+The Acceptable Use Policy below clarifies our hosting policy also lists down what's not allowed that are not covered in this policy.
 
 ### Exceptions
 
-Currently, we exempt the following docs hosting services and
-static site generators from the OSI-approved open-source license requirement:
+Currently, we exempt the following docs hosting services and static site generators from the OSI-approved open-source license requirement:
 
 * [GitBook](https://gitbook.io)
 * [Obsidian Publish](https://obsidian.md/publish)
 
 If yours is not in the list, [let us know](../docs/issue-tracker.md) and we'll look into it.
+Note that license exceptions don't usually look at the infrastructure your project utilizes
+(e.g. who's your hosting provider, what jurisdiction the legal entity in question, etc.)
+since it's out of scope.
 
 ## Acceptable Use Policy
 
 The `lorebooks.wiki` domain service is provided for the purpose of providing free
 subdomains to documentation and wiki websites.  However, this does not mean they
 may be used for **any** purpose.
-Like [the Obl.ong domain service](https://codeberg.org/oblong/conduct#acceptable-use-policy),
-we prohibit use of our subdomains for any of the behaviors listed above as unacceptable,
-and for any of the following:
+Like [the Obl.ong domain service][oblong-conduct], we prohibit use of our subdomains
+for any of the behaviors listed above as unacceptable, and for any of the following:
 
 * any activities that intend to or actually generate profits for shareholders or
   do not act in the public interest
@@ -98,8 +88,12 @@ action.
 
 ## Policy updates
 
+We may update this terms of service to improve our abuse prevention and report handling,
+as well as to incorporate feedback from the community and support service improvements.
+
 When we are implementing any policy changes for this service, you'll be notified
-through your email address on file with us.
+through your email address on file with us and through the meta issue tracker
+via [this issue](https://github.com/lorebooks-wiki/meta/issues/1).
 
 ## Reporting abusive content and behavior
 
@@ -110,17 +104,14 @@ abusive.
 
 ## Attribution
 
-The Acceptable Use Policy is adopted from [Obl.ong Code of Conduct], which is loosely
-adapted from the [TLD policy for .gay], and includes wording from the [queer.party]
-Mastodon instance about page.
+The Acceptable Use Policy is adopted from [Obl.ong Code of Conduct][oblong-conduct],
+which is loosely adapted from the [TLD policy for .gay], and includes wording from the
+[queer.party] Mastodon instance about page.
 
 [Creative Commons licenses]: https://creativecommons.org/licenses
-[request to enable redirects]: https://github.com/recaptime-dev/proxyparty-caddy/issues/new/choose
-[proxypartylab issue tracker]: https://github.com/recaptime-dev/proxyparty-caddy/issues
-[contact a squad member directly]: https://recaptime.dev/team
+[proxyparty]: https://github.com/lorebooks-wiki/proxyparty
 [TLD policy for .gay]: https://static1.squarespace.com/static/592f08d237c5815a5b057003/t/5e14d4b759f8eb5218ec5653/1578423480494/TLD+Policies+-+.gay.pdf
 [queer.party]: https://queer.party/about
-[Obl.ong Code of Conduct]: https://codeberg.org/oblong/conduct/src/commit/main/README.md
-[OSI-approved open-source license]: https://opensource.org/licenses
+[oblong-conduct]: https://codeberg.org/oblong/conduct/src/commit/main/README.md
 [Community Code of Conduct]: https://policies.recaptime.dev/code-of-conduct
-[this form]: https://tally.so/r/mOo0Rm
+[osi-approved]: https://opensource.org/license
