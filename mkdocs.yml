@@ -5,28 +5,31 @@ site_name: Community Lorebooks
 site_url: "https://lorebooks.wiki"
 site_author: Recap Time Squad and contributors
 site_description: >-
-  An domain service for your documentation and wiki sites.
+  An subdomain service primarily for digital gardens and wikis,
+  maintained by @recaptime-dev.
 
 # Lock the use-directory-urls flag
 use_directory_urls: true
 
 # Repository
 repo_url: https://github.com/lorebooks-wiki/homepage
-edit_uri: blob/staging/docs/
+edit_uri: blob/main/src/
 docs_dir: src
 
 # Copyright
 copyright: >-
-  Copyright &copy; 2021-present Recap Time Squad and its contributors, licensed under CC BY-SA 4.0. Recap Time Squad is <a href="https://hackclub.com/fiscal-sponsorship">fiscally sponsored</a> by <a href="https://hackfoundation.org">The Hack Foundation</a> (d.b.a. <a href="https://hackclub.com">Hack Club</a>), a 501(c)(3) US nonprofit (EIN: 81-2908499).
+  Copyright &copy; 2021-present Recap Time Squad and its contributors, website content
+  licensed under CC BY-SA 4.0.
 
 # themeing
 theme:
   # https://github.com/squidfunk/mkdocs-material
   name: material
+  custom_dir: overrides
 
   # for the sidebar/site icon on navbar
-  icon:
-    logo: octicons/book-16
+  logo: assets/img/lorebooks-wiki-icon.png
+  favicon: assets/img/lorebooks-wiki-icon.png
 
   # theme for dark modes
   palette:
@@ -74,6 +77,7 @@ theme:
     # - toc.integrate
 
 # Extensions
+
 markdown_extensions:
   - admonition
   - abbr
@@ -124,7 +128,9 @@ plugins:
   - redirects:
       redirect_maps:
         'tos.md': 'legal/tos.md'
-        'get-started': 'docs/getting-started.md'
+        'get-started.md': 'docs/getting-started.md'
+        "getting-started.md": "docs/getting-started.md"
+        "docs/reserved-subdomains.md": "docs/reference/reserved-subdomains.md"
 
 # Page Tree
 nav:
@@ -135,15 +141,12 @@ nav:
     - donate.md
   - Docs:
     - docs/index.md
-    - "Issue tracker": docs/issue-tracker.md
     - "Getting Started": docs/getting-started.md
-    - "Reserved subdomains": docs/reserved-subdomains.md
+    - "Issue tracker": docs/issue-tracker.md
     - Troubleshooting: docs/troubleshooting.md
-    - Setup:
-      - Managing DNS records: docs/setup/dns-records.md
-      - Setting up redirects: docs/setup/redirects.md
-      - Parking pages: docs/setup/parking.md
-  - Project Financial Records: https://hcb.hackclub.com/recaptime-dev
+    - Reference:
+      - "Reserved subdomains": docs/reference/reserved-subdomains.md
+  - Project Financial Records: https://hcb.hackclub.com/lorebooks-wiki
   - Legal:
     - legal/index.md
     - Hosting ToS: legal/tos.md
@@ -155,4 +158,28 @@ nav:
 
 extra:
   generator: true # DO NOT DISABLE THIS!
-  
+  hcb:
+    org_slug: lorebooks-wiki
+    org_name: Community Lorebooks
+    parent_org_slug: recaptime-dev
+    parent_org_name: Recap Time Squad
+  social:
+    - icon: material/bank-outline
+      link: https://hcb.hackclub.com/recaptime-dev
+      name: See our finances on HCB
+    - icon: simple/opencollective
+      link: https://opencollective.com/recaptime-dev
+      name: See our finances on Open Collective
+    - icon: simple/github
+      link: https://github.com/lorebooks-wiki
+      name: Explore our reposiotries on GitHub
+  footer_links:
+    - label: Terms of service
+      href: /legal/tos
+    - label: Privacy Policy
+      href: https://policies.recaptime.dev/privacy
+    - label: Transparency Reports
+      href: https://transparency.recaptime.dev
+
+extra_css:
+  - assets/stylesheets/theme.css

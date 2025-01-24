@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block announce %}
+  <strong>We'll be launching soon before High Seas end!</strong>
+  Keep your eyes peeled on <a href="https://blog.recaptime.dev">our blog</a>
+  and on <a href="https://bsky.app/profile/lorebooks.wiki">Bluesky</a> and
+  <a href="https://mastodon.xyz/@RecapTimeSquad">fediverse</a> for updates.
+{% endblock %}
+
+{% block content %}
+  {{ super() }}
+  <!-- Help Scout Beacon widget -->
+  <!-- Disabled for now
+  <script type="text/javascript">!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});</script>
+  <script type="text/javascript">window.Beacon('init', 'befb0a3b-6162-4ec4-889d-1bc5abc1558b')</script>
+  -->
+{% endblock %}

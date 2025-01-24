@@ -1,0 +1,24 @@
+<div class="md-copyright footer-links">
+    {% if config.copyright %}
+      <div class="md-copyright__highlight">
+        {{ config.copyright }}
+      </div>
+    {% endif %}
+    {% if not config.extra.generator == false %}
+      Made with
+      <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+        Material for MkDocs
+      </a>
+    {% endif %}
+    {% if config.extra.hcb and not config.extra.hcb.hide == true %}
+        <p class="footer-text">
+            <a href="https://hcb.hackclub.com/{{ config.extra.hcb.org_slug }}">{{config.extra.hcb.org_name}}</a>{% if config.extra.hcb.parent_org_slug and config.extra.hcb.parent_org_name %}, a <a href="https://hcb.hackclub.com/{{ config.extra.hcb.parent_org_slug}}">{{config.extra.hcb.parent_org_name}}</a> project,{% endif %} is <a href="https://hackclub.com/fiscal-sponsorship">fiscally sponsored</a> by <a href="https://hackfoundation.org">The Hack Foundation</a> (d.b.a <a href="https://hackclub.com">Hack Club</a>), a US 501(c)(3) non-profit with EIN 81-2908499.
+        </p>
+    {% endif %}
+  
+    <ul>
+      {% for link in config.extra.footer_links %}
+      <li><a href="{{ link.href }}">{{ link.label }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
