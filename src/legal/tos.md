@@ -38,10 +38,10 @@ since it's out of scope.
 ## Acceptable Use Policy
 
 The `lorebooks.wiki` domain service is provided for the purpose of providing free
-subdomains to documentation and wiki websites.  However, this does not mean they
-may be used for **any** purpose.
-Like [the Obl.ong domain service][oblong-conduct], we prohibit use of our subdomains
-for any of the behaviors listed above as unacceptable, and for any of the following:
+subdomains primarily to documentation and wiki websites, but we do not limit them
+to anyone in the wiki communities.  However, this does not mean they may be used for
+**any** purpose. Like [the Obl.ong domain service][oblong-conduct], we prohibit use of our
+service for any of the behaviors listed above as unacceptable, and for any of the following:
 
 * any activities that intend to or actually generate profits for shareholders or
   do not act in the public interest
