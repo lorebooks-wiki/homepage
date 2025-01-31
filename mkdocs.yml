@@ -77,7 +77,6 @@ theme:
     # - toc.integrate
 
 # Extensions
-
 markdown_extensions:
   - admonition
   - abbr
@@ -118,12 +117,13 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
+# theme plugins
 plugins:
   - search
   # to have revision dates on the build via git logs, set CI var to true
   - git-revision-date-localized:
-      enable_creation_date: !ENV [CI, false]
-      enabled: !ENV [CI, false]
+      enable_creation_date: true
+      enabled: true
       fallback_to_build_date: true
   - redirects:
       redirect_maps:
@@ -131,8 +131,10 @@ plugins:
         'get-started.md': 'docs/getting-started.md'
         "getting-started.md": "docs/getting-started.md"
         "docs/reserved-subdomains.md": "docs/reference/reserved-subdomains.md"
+        "docs/beta-subdomains.md": "docs/reference/beta-subdomains.md"
+        "docs/reference/registry.md": "src/docs/reference/subdomain-registry.md"
 
-# Page Tree
+# Navigation menu
 nav:
   - Hub:
     - index.md
@@ -142,9 +144,15 @@ nav:
   - Docs:
     - docs/index.md
     - "Getting Started": docs/getting-started.md
-    - "Issue tracker": docs/issue-tracker.md
     - Troubleshooting: docs/troubleshooting.md
+    - "Issue tracker": docs/issue-tracker.md
+    - Project maintainers: docs/maintainers.md
     - Reference:
+      - DNS records: docs/reference/dns-records.md
+      - Subdomain Registry: docs/reference/subdomain-registry.md
+      - Configuring redirects: docs/reference/redirects.md
+      - Subdomain parking: docs/reference/parking.md
+      - "Beta subdomains": docs/beta-subdomains.md
       - "Reserved subdomains": docs/reference/reserved-subdomains.md
   - Project Financial Records: https://hcb.hackclub.com/lorebooks-wiki
   - Legal:

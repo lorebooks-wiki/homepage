@@ -1,3 +1,5 @@
 {
-    "origins": ["https://lorebooks.wiki", "https://lorebooks.eu.org"]
+    "origins": ["https://lorebooks.wiki", "https://lorebooks.eu.org"],
+    "orginRegex": ["https://*.lorebooks-wiki.pages.dev"],
+    "defaultCommentOrder": "newest"
 }
