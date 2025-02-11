@@ -27,6 +27,6 @@
   "devDependencies": {
     "all-contributors-cli": "^6.26.1",
     "markdownlint": "^0.23.0",
-    "netlify-cli": "^17.36.3"
+    "netlify-cli": "^17.38.1"
   }
 }
