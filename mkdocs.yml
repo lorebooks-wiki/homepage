@@ -181,6 +181,9 @@ extra:
     - icon: simple/github
       link: https://github.com/lorebooks-wiki
       name: Explore our reposiotries on GitHub
+    - icon: simple/gitlab
+      name: Explore our repositories on GitLab SaaS
+      link: https://gitlab.com/lorebooks-wiki
   footer_links:
     - label: Terms of service
       href: /legal/tos
