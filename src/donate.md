@@ -11,7 +11,8 @@ under [Recap Time Squad](https://recaptime.dev) and currently covered out of poc
 as the infrastructure that makes this (and other projects) run smoothly.
 
 !!! info "Fiscal sponsorship disclosure"
-    Community Lorebooks, a [Recap Time Squad](https://recaptime.dev) project, is [fiscally sponsored](https://hackclub.com/fiscal-sponsorship) by [The Hack Foundation](https://hackfoundation.org) (d.b.a. [Hack Club](https://hackclub.com)), a 501\(c)(3) US nonprofit (EIN: 81-2908499).
+    Community Lorebooks, a [Recap Time Squad](https://recaptime.dev) project, is [fiscally sponsored](https://hackclub.com/fiscal-sponsorship)
+    by [The Hack Foundation](https://hackfoundation.org) (d.b.a. [Hack Club](https://hackclub.com)), a 501\(c)(3) US nonprofit (EIN: 81-2908499).
 
     Have questions regarding our fiscal sponsorship status, need a invoice for your donation
     (on mailed US checks and bank deposits) or even considering corporate sponsorship or
@@ -43,7 +44,8 @@ your preference.
 
 === "Open Collective"
 
-    > Open Collective is a platform where communities can collect and disburse money transparently, to sustain and grow their projects. ([from their docs site])
+    > Open Collective is a platform where communities can collect and disburse money transparently,
+    > to sustain and grow their projects. ([from their docs site])
 
     While we use HCB as our main platform for our fundraising efforts with finanical
     transparency by enabling Transparency Mode, we still using Open Collective to make
@@ -53,19 +55,20 @@ your preference.
 
 === "GitHub Sponsors"
 
-    If you are sponsoring projects and organizations via GitHub Sponsors, we also have
-    set up one. It's linked to our restricted fund bank account details on HCB through
-    our Stripe Connect Express setup.
+    If you are sponsoring projects and organizations via GitHub Sponsors, we also have set up one.
+    It's linked to our restricted fund bank account details on HCB through Stripe Connect Express.
 
     <iframe src="https://github.com/sponsors/lorebooks-wiki/card" title="Sponsor lorebooks.wiki via GitHub Sponsors" height="225" width="600" style="border: 0;"></iframe>
 
 ## More ways to donate
 
-Crypto? Sending us some spare EUR credits on Uberspace? Anything else?
-Visit [our umbrella organization's donate page](https://recaptime.dev/donate)
+Crypto? Bank checks in either US or PH? Anything else? Visit [our umbrella organization's donate page][donate-umbrella]
 for all the details.
 
 ## Have questions?
 
-Visit [our donation FAQs](https://recaptime.dev/donate/faq) or reach out to us at
-`sponsors@recaptime.dev`.
+Visit [our donation FAQs][faq] or reach out to us at `sponsors@recaptime.dev` (don't forget to CC the HCB team at
+`hcb@hackclub.com`).
+
+[donate-umbrella]: https://recaptime.dev/donate
+[faq]: https://recaptime.dev/donate/faq
